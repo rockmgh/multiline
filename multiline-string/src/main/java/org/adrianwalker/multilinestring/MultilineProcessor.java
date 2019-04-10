@@ -19,7 +19,8 @@ public final class MultilineProcessor extends AbstractProcessor {
   
   @Override
   public void init(final ProcessingEnvironment procEnv) {
-	  super.init(procEnv);
+		super.init(procEnv);
+		
 	  String envClassName = procEnv.getClass().getName();
 	  if (envClassName.contains("com.sun.tools")) {
 		  delegator = new JavacMultilineProcessor();

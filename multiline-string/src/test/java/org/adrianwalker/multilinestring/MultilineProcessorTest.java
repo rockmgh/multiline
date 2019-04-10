@@ -21,7 +21,8 @@ public class MultilineProcessorTest {
 	@Test
 	public void initInJavacEnv() throws IllegalArgumentException, IllegalAccessException {
 		// given 
-		JavacProcessingEnvironment env = new JavacProcessingEnvironment(new Context(), null);
+		//JavacProcessingEnvironment env = new JavacProcessingEnvironment(new Context());
+		JavacProcessingEnvironment env = JavacProcessingEnvironment.instance(new Context());
 		// when
 		processor.init(env);
 
